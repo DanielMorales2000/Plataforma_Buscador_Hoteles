@@ -1,0 +1,11 @@
+Options ALL -Indexes
+
+ErrorDocument 404 /buscador_hoteles/404.html
+ErrorDocument 403 /buscador_hoteles/403.html
+ErrorDocument 500 /Walktomyworld1/500.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
